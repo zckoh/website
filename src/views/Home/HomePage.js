@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { MDBContainer, MDBView, MDBRow, MDBCol, MDBIcon, MDBMask } from "mdbreact";
+import smoothscroll from 'smoothscroll-polyfill';
 import HomePageImg from "../../assets/img/homepage-img.jpg";
 import ProfilePicture from "../../assets/img/profile-photo.jpeg";
 import ArrowDown from "../../assets/img/arrow-down.png";
@@ -8,6 +9,8 @@ import "../../assets/css/homepage.css";
 const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)
 
 const HomePage = () => {
+
+    smoothscroll.polyfill()
 
     const bottomOfHeader = useRef(null)
     const executeScroll = () => scrollToRef(bottomOfHeader)
@@ -38,10 +41,10 @@ const HomePage = () => {
                         <h4 className="h5-responsive font-weight-bold text-center my-2">My Goals for 2020:</h4>
                         <ol className="w-responsive text-center mx-auto mb-5">
                             <li className="w-responsive text-center mx-auto">
-                                Learn web development and deploy production-level code.
+                                Learn web development (front-end + back-end)
                             </li>
                             <li className="w-responsive text-center mx-auto">
-                                Start with kaggle and participate in at least 2 competitions.
+                                Learn more about Big Data technologies
                             </li>
                         </ol>
                         <MDBRow>
