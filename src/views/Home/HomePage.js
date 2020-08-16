@@ -19,7 +19,7 @@ const HomePage = () => {
                     <MDBMask className="flex-center flex-column text-white text-center homepage-mask">
                         <h2>Hi I'm Zac, welcome to my website!</h2>
                         <h5>Scroll down for more info!</h5>
-                        <img onClick={executeScroll} src={ArrowDown} alt="arrow down" class="bounce arrow"></img>
+                        <img onClick={executeScroll} src={ArrowDown} alt="arrow down" className="bounce arrow"></img>
                     </MDBMask>
                 </MDBView>
                 <div ref={bottomOfHeader}></div>
