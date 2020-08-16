@@ -1,24 +1,26 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import './App.css';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import MyNavbar from './components/Navbar.js';
+import HomePage from './views/Home/HomePage.js';
+import ProjectsPage from './views/Projects/ProjectsPage.js';
+import WhatToEatPage from './views/WhatToEat/WhatToEatPage.js';
+import Error404Page from './views/Error404Page';
 
 function App() {
     return (
-        <Router basename='/'>
-            <div>
-                <ul>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/about">About</Link></li>
-                </ul>
-                <hr />
-                <Route exact path="/" component={Home} />
-                <Route path="/about" component={About} />
-            </div>
-        </Router>
+        <div className="content">
+            <Router>
+                <MyNavbar />
+                <Switch>
+                    <Route exact path="/home" component={HomePage} />
+                    <Route exact path="/projects" component={ProjectsPage} />
+                    <Route exact path="/what-to-eat" component={WhatToEatPage} />
+                    <Route exact path="/" component={HomePage} />
+                    <Route component={Error404Page} />
+                </Switch>
+            </Router>
+        </div>
     );
 }
-
-const Home = () => <div><h2>Home</h2></div>
-const About = () => <div><h2>About</h2></div>
 
 export default App;
