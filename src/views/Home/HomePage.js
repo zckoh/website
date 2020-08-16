@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { MDBContainer, MDBView, MDBRow, MDBCol, MDBIcon, MDBMask } from "mdbreact";
+import { MDBContainer, MDBView, MDBRow, MDBCol, MDBIcon, MDBMask, MDBBtn, MDBBox } from "mdbreact";
 import smoothscroll from 'smoothscroll-polyfill';
 import HomePageImg from "../../assets/img/homepage-img.jpg";
 import ProfilePicture from "../../assets/img/profile-photo.jpeg";
@@ -113,6 +113,11 @@ const HomePage = () => {
                         </MDBRow>
                     </section>
                 </MDBContainer>
+                <MDBBox display="flex" justifyContent="center" >
+                    <MDBBtn gradient="blue" href="projects" className="button-rounded">
+                        Check out the projects that I've worked on
+                    </MDBBtn>
+                </MDBBox>
             </main>
         </div>
     );
