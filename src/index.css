@@ -5,7 +5,7 @@ html, body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(228, 228, 228);
+  background-color: rgb(0, 0, 0);
   height: 100%;
   scroll-behavior: smooth;
   --scroll-behavior: smooth;
@@ -16,9 +16,6 @@ body {
   flex-direction: column; 
 }
  
-.content { 
-  flex: 1 0 auto; 
-} 
 .footer {
   flex-shrink: 0; 
 }
@@ -31,11 +28,6 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }
 
 .button-rounded {border-radius: 6px;}

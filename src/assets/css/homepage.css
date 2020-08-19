@@ -2,6 +2,34 @@
     margin: 5% 0;
 }
 
+.homepage-background {
+    position: relative;
+    justify-content: center;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.homepage-hero {
+    position: absolute;
+    z-index: 1;
+    top: calc(50% - 2rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.homepage-content {
+    background-color: #202f55;
+    z-index: 1;
+}
+
+.content {
+    /* margin-top: 30px; */
+}
+
 .arrow {
     height: 20px;
     text-align: center;

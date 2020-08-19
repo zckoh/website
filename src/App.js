@@ -8,9 +8,9 @@ import Error404Page from './views/Error404Page';
 
 function App() {
     return (
-        <div className="content">
+        <div>
             <Router>
-                <MyNavbar />
+                <MyNavbar/>
                 <Switch>
                     <Route exact path="/home" component={HomePage} />
                     <Route exact path="/projects" component={ProjectsPage} />

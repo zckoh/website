@@ -1,33 +1,43 @@
-import React, { useRef } from "react";
-import { MDBContainer, MDBView, MDBRow, MDBCol, MDBIcon, MDBMask, MDBBtn, MDBBox } from "mdbreact";
-import smoothscroll from 'smoothscroll-polyfill';
-import HomePageImg from "../../assets/img/homepage-img.jpg";
+import React, { useRef, useState, useEffect } from "react";
+import { MDBContainer, MDBRow, MDBCol, MDBIcon, MDBBtn, MDBBox } from "mdbreact";
+// import HomePageImg from "../../assets/img/homepage-img.jpg";
+import HomePageImg from "../../assets/img/homepage-background2.jpg";
 import ProfilePicture from "../../assets/img/profile-photo.jpeg";
 import ArrowDown from "../../assets/img/arrow-down.png";
 import "../../assets/css/homepage.css";
 
-const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)
+const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
 
 const HomePage = () => {
+    const [offsetY, setOffsetY] = useState(0);
+    const handleScroll = () => setOffsetY(window.pageYOffset);
 
-    smoothscroll.polyfill()
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
     const bottomOfHeader = useRef(null)
     const executeScroll = () => scrollToRef(bottomOfHeader)
 
     return (
-        <div>
+        <div className="content">
             <header>
-                <MDBView src={HomePageImg}>
-                    <MDBMask className="flex-center flex-column text-white text-center homepage-mask">
-                        <h2>Hi I'm Zac, welcome to my website!</h2>
-                        <h5>Scroll down for more info!</h5>
-                        <img onClick={executeScroll} src={ArrowDown} alt="arrow down" className="bounce arrow"></img>
-                    </MDBMask>
-                </MDBView>
-                <div ref={bottomOfHeader}></div>
+                <div className="homepage-hero text-center text-white">
+                    <h2>Hi I'm Zac, welcome to my website!</h2>
+                    <h5>Scroll down for more info!</h5>
+                    <img onClick={executeScroll} src={ArrowDown} alt="arrow down" className="bounce arrow"></img>
+                </div>
+                <div className="homepage-background" 
+                style={{ 
+                    backgroundImage: `url(${HomePageImg})`,
+                    transform: `translateY(${ offsetY * 0.2 }px)`
+                }}
+                />
             </header>
-            <main>
+            <main className="homepage-content pb-4 text-white">
+                <div style={{ padding: `100px` }} ref={bottomOfHeader}></div>
                 <MDBContainer>
                     <section className="my-5">
                         <h2 className="h1-responsive font-weight-bold text-center my-5">

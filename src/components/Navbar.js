@@ -8,6 +8,15 @@ import Logo from '../assets/img/logo.png';
 import '../assets/css/navbar.css';
 
 const MyNavbar = () => {
+    // const [currentScrollHeight, setCurrentScrollHeight] = useState(0);
+    // const handleScroll = () => setOffsetY(window.pageYOffset);
+
+    // useEffect(() => {
+    //     window.addEventListener("scroll", handleScroll);
+
+    //     return () => window.removeEventListener("scroll", handleScroll);
+    // }, []);
+
     const [collapsed, setCollapsed] = useState(false);
     const toggleCollapse = () => { setCollapsed(!collapsed); }
 
@@ -35,8 +44,7 @@ const MyNavbar = () => {
     }, [collapsed]);
 
     return (
-        <div ref={node} >
-            <MDBNavbar color="stylish-color-dark" fixed="top" dark expand="md" scrolling>
+            <MDBNavbar dark expand="md" ref={node}>
                 <MDBNavbarBrand href="home">
                     <img src={Logo} style={{
                         height: '1.5rem',
@@ -48,7 +56,7 @@ const MyNavbar = () => {
                 </MDBNavbarBrand>
                 <MDBNavbarToggler onClick={() => { toggleCollapse() }} />
                 <MDBCollapse id="navbarCollapse" isOpen={collapsed} navbar>
-                    <MDBNavbarNav left>
+                    <MDBNavbarNav right>
                         <MDBNavItem>
                             <MDBNavLink to={"home"}>
                                 <div onClick={() => { setCollapsed(false) }}>
@@ -64,12 +72,17 @@ const MyNavbar = () => {
                             </MDBNavLink>
                         </MDBNavItem>
                         <MDBNavItem>
-                            <MDBDropdown className="mydropdown">
+                            <MDBDropdown>
                                 <MDBDropdownToggle nav caret>
                                     <span className="mr-2"><strong>Apps</strong></span>
                                 </MDBDropdownToggle>
-                                <MDBDropdownMenu className="mydropdown">
-                                    <MDBDropdownItem className="mydropdownitems" href="what-to-eat"><strong>What To Eat!</strong></MDBDropdownItem>
+                                <MDBDropdownMenu>
+                                    {/* <MDBNavLink to={"what-to-eat"}>
+                                        <div onClick={() => { setCollapsed(false) }}>
+                                            <strong>What To Eat!</strong>
+                                        </div>
+                                    </MDBNavLink> */}
+                                    <MDBDropdownItem className="mydropdownitems" to={"what-to-eat"}><strong>What To Eat!</strong></MDBDropdownItem>
                                     <MDBDropdownItem disabled className="mydropdownitems" href="#">More coming soon!</MDBDropdownItem>
                                 </MDBDropdownMenu>
                             </MDBDropdown>
@@ -77,7 +90,6 @@ const MyNavbar = () => {
                     </MDBNavbarNav>
                 </MDBCollapse>
             </MDBNavbar>
-        </div>
     );
 }
 
