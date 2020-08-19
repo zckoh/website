@@ -51,7 +51,7 @@ const WhatToEatPage = () => {
     }
 
     return (
-        <MDBContainer fluid className="my-5 pb-5 pt-5 text-center justify-content-center">
+        <MDBContainer fluid className="my-5 pb-5 pt-5 text-center justify-content-center content">
             <h1>What To Eat!</h1>
             <MDBContainer fluid>
                 <MDBBtn

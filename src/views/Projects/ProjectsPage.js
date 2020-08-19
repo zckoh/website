@@ -1,5 +1,5 @@
 import React from "react";
-import {  MDBRow, MDBCol, MDBCard, MDBCardBody, MDBMask, MDBIcon, MDBView, MDBBtn } from "mdbreact";
+import {  MDBRow, MDBCol, MDBCard, MDBCardBody, MDBMask, MDBIcon, MDBView, MDBBtn, MDBContainer } from "mdbreact";
 import WebsiteScreenShot from "../../assets/img/website-screenshot.jpg";
 import SceneClassifierScreenshot from "../../assets/img/scene-classifier-screenshot.jpg";
 import AnnotatedTransformer from "../../assets/img/the-annotated-transformer_14_0.png";
@@ -8,8 +8,12 @@ import "../../assets/css/projectpage.css";
 
 const ProjectsPage = () => {
   return (
-    <MDBCard className="my-5 px-5 pb-5 light-grey-background z-depth-0">
-      <MDBCardBody>
+    <main className="text pt-5">
+    <MDBContainer fluid className="px-5 pb-5 z-depth-0 font-weight-normal">
+    {/* <MDBCard className="px-5 pb-5 z-depth-0 main-background-color">
+    <MDBCardBody> */}
+
+      
         <h2 className="h1-responsive font-weight-bold text-center my-5">
           My Recent Projects
         </h2>
@@ -18,7 +22,7 @@ const ProjectsPage = () => {
         </p>
         <MDBRow>
           <MDBCol lg="7">
-              <h6 className="font-weight-bold mb-3 brown-text">
+              <h6 className="font-weight-bold mb-3 yellow-text">
                 <MDBIcon fab icon="js-square" className="pr-2" />
                 Web Development
               </h6>
@@ -87,7 +91,7 @@ const ProjectsPage = () => {
             </MDBView>
           </MDBCol>
           <MDBCol lg="7">
-              <h6 className="font-weight-bold mb-3 brown-text">
+              <h6 className="font-weight-bold mb-3 yellow-text">
                 <MDBIcon fab icon="js-square" className="pr-2" />
                 Web Development
               </h6>
@@ -107,7 +111,7 @@ const ProjectsPage = () => {
               Date: Nov 2019 - Feb 2020
             </p>
             <MDBBtn 
-              color="brown" size="md" className="waves-light button-rounded" 
+              color="deep-orange" size="md" className="waves-light button-rounded" 
               href="https://github.com/zckoh/website" target="_blank"
               style={{"textTransform": "none"}}>
               GitHub Link (zckoh/website)
@@ -148,7 +152,7 @@ const ProjectsPage = () => {
             </MDBBtn>
           </MDBCol>
           <MDBCol lg="5">
-            <MDBView className="white-background rounded z-depth-2 mb-lg-0 mb-4" hover waves>
+            <MDBView className="rounded z-depth-2 mb-lg-0 mb-4" hover waves>
               <img
                 className="img-fluid center-photo"
                 src={AnnotatedTransformer}
@@ -210,8 +214,12 @@ const ProjectsPage = () => {
             </MDBBtn>
           </MDBCol>
         </MDBRow>
-      </MDBCardBody>
-    </MDBCard>
+        {/* </MDBCardBody>
+    </MDBCard> */}
+
+
+    </MDBContainer>
+    </main>
   );
 }
 

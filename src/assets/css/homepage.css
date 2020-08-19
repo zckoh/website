@@ -21,15 +21,6 @@
     width: 100%;
 }
 
-.homepage-content {
-    background-color: #202f55;
-    z-index: 1;
-}
-
-.content {
-    /* margin-top: 30px; */
-}
-
 .arrow {
     height: 20px;
     text-align: center;
