@@ -36,7 +36,7 @@ const MyNavbar = () => {
 
     return (
         <div ref={node}>
-            <MDBNavbar expand="md" >
+            <MDBNavbar dark expand="md" >
                 <MDBNavbarBrand>
                     <NavLink to='/'>
                     <img src={Logo} style={{
@@ -62,7 +62,7 @@ const MyNavbar = () => {
                             </NavLink>
                         </MDBNavItem>
                         <MDBNavItem className="text-center">
-                            <NavLink to={"what-to-eat"} onClick={() => { setCollapsed(false) }} className="text">
+                            <NavLink to={"contact"} onClick={() => { setCollapsed(false) }} className="text">
                                     <strong>Contact</strong>
                             </NavLink>
                         </MDBNavItem>

@@ -35,10 +35,9 @@ const HomePage = () => {
                     }}
                 />
             </section>
-            <section id="bottom-part" className="pb-4 main-background-color">
-                <div style={{ padding: `100px` }} ref={bottomOfHeader}></div>
+            <section id="bottom-part" className="padding-top pb-4">
                 <MDBContainer>
-                    <h2 className="h1-responsive font-weight-bold text-center my-5">
+                    <h2 className="h1-responsive font-weight-bold text-center my-5" ref={bottomOfHeader}>
                         About Me
                         </h2>
                     <p className="w-responsive text-center mx-auto mb-4">

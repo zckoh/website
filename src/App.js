@@ -6,6 +6,7 @@ import ProjectsPage from './views/Projects/ProjectsPage.js';
 import WhatToEatPage from './views/WhatToEat/WhatToEatPage.js';
 import Error404Page from './views/Error404Page';
 import Footer from "./components/Footer";
+import ContactPage from './views/Contact/ContactPage.js';
 
 function App() {
     return (
@@ -15,6 +16,7 @@ function App() {
                 <Switch>
                     <Route exact path="/home" component={HomePage} />
                     <Route exact path="/projects" component={ProjectsPage} />
+                    <Route exact path="/contact" component={ContactPage} />
                     <Route exact path="/what-to-eat" component={WhatToEatPage} />
                     <Route exact path="/" component={HomePage} />
                     <Route component={Error404Page} />

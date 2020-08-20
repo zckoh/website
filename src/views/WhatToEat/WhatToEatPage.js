@@ -4,7 +4,6 @@ import {
 } from "mdbreact";
 import Emoji from '../../components/Emoji.js';
 import EatOutTab from './Tabs/EatOutTab.js';
-// import FoodDeliveryTab from './Tabs/FoodDeliveryTab.js';
 import CookTab from './Tabs/CookTab.js';
 
 
@@ -15,29 +14,17 @@ const WhatToEatPage = () => {
     const [cookingIsOpen, setCookingIsOpen] = useState(false);
     const toggleCooking = () => setCookingIsOpen(!cookingIsOpen);
 
-    // const [foodDeliveryIsOpen, setFoodDeliveryIsOpen] = useState(false);
-    // const toggleFoodDelivery = () => setFoodDeliveryIsOpen(!foodDeliveryIsOpen);
-
     const [eatOutiIsOpen, setEatOutIsOpen] = useState(false);
     const toogleEatOut = () => setEatOutIsOpen(!eatOutiIsOpen);
 
     const openCookingCollapse = () => {
         toggleCooking();
         setWhichIsOpen("Cooking");
-        // setFoodDeliveryIsOpen(false);
         setEatOutIsOpen(false);
     }
 
-    // const openFoodDeliveryCollapse = () => {
-    //     setCookingIsOpen(false);
-    //     toggleFoodDelivery();
-    //     setWhichIsOpen("Food Delivery");
-    //     setEatOutIsOpen(false);
-    // }
-
     const openEatOutCollapse = () => {
         setCookingIsOpen(false);
-        // setFoodDeliveryIsOpen(false);
         toogleEatOut();
         setWhichIsOpen("Eat Out");
     }
@@ -51,8 +38,9 @@ const WhatToEatPage = () => {
     }
 
     return (
-        <MDBContainer fluid className="my-5 pb-5 pt-5 text-center justify-content-center content">
-            <h1>What To Eat!</h1>
+        <main className="text padding-top">
+        <MDBContainer fluid className="my-5 pb-5 text-center justify-content-center content">
+            <h1 className="pb-3">What To Eat!</h1>
             <MDBContainer fluid>
                 <MDBBtn
                     color="dark"
@@ -61,13 +49,6 @@ const WhatToEatPage = () => {
                 >
                     Cook? (Save <Emoji symbol="💲💲" />)
                 </MDBBtn>
-                {/* <MDBBtn
-                    color="purple"
-                    onClick={() => { openFoodDeliveryCollapse(); setCloseCollapseSpeed("Food Delivery");}}
-                    style={{ marginBottom: "1rem", "textTransform": "none" }}
-                >
-                    Food Delivery? (Spend <Emoji symbol="💲💲" />)
-                </MDBBtn> */}
                 <MDBBtn
                     size="large"
                     color="blue"
@@ -82,11 +63,9 @@ const WhatToEatPage = () => {
                 <MDBCollapse id="eatingOutCollapse" delay={{hide: collapseCloseSpeed}} isOpen={eatOutiIsOpen}>
                     <EatOutTab />
                 </MDBCollapse>
-                {/* <MDBCollapse id="foodDeliveryCollapse" delay={{hide: collapseCloseSpeed}} isOpen={foodDeliveryIsOpen}>
-                    <FoodDeliveryTab />
-                </MDBCollapse> */}
             </MDBContainer>
         </MDBContainer>
+        </main>
     );
 }
 
