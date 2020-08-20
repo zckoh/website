@@ -47,16 +47,16 @@ const ProjectsPage = () => {
                             Date: Jun 2020 - Jul 2020
                         </p>
                         <MDBBtn
-                            color="brown" size="md" className="waves-light button-rounded"
-                            href="https://tfnglun.com" target="_blank"
-                            style={{ "textTransform": "none" }}>
-                            tfnglun.com
-                        </MDBBtn>
-                        <MDBBtn
                             color="primary" size="md" className="waves-light button-rounded"
                             href="https://github.com/zckoh/ecommerce-fullstack" target="_blank"
                             style={{ "textTransform": "none" }}>
                             GitHub Link (zckoh/ecommerce-fullstack)
+                        </MDBBtn>
+                        <MDBBtn
+                            color="dark-green" size="md" className="waves-light button-rounded"
+                            href="https://tfnglun.com" target="_blank"
+                            style={{ "textTransform": "none" }}>
+                            tfnglun.com
                         </MDBBtn>
                     </MDBCol>
                     <MDBCol lg="5">
@@ -107,10 +107,16 @@ const ProjectsPage = () => {
                             Date: Nov 2019 - Feb 2020
                         </p>
                         <MDBBtn
-                            color="deep-orange" size="md" className="waves-light button-rounded"
+                            color="primary" size="md" className="waves-light button-rounded"
                             href="https://github.com/zckoh/website" target="_blank"
                             style={{ "textTransform": "none" }}>
                             GitHub Link (zckoh/website)
+                        </MDBBtn>
+                        <MDBBtn
+                            color="dark-green" size="md" className="waves-light button-rounded"
+                            href="what-to-eat" target="_blank"
+                            style={{ "textTransform": "none" }}>
+                            What To Eat!
                         </MDBBtn>
                     </MDBCol>
                 </MDBRow>
@@ -141,7 +147,7 @@ const ProjectsPage = () => {
                             Date: March 2019 - May 2019
                         </p>
                         <MDBBtn
-                            color="pink" size="md" className="waves-light button-rounded"
+                            color="primary" size="md" className="waves-light button-rounded"
                             href="https://github.com/COMP6248-Reproducability-Challenge/music-transformer-comp6248" target="_blank"
                             style={{ "textTransform": "none" }}>
                             GitHub Link (music-transformer-comp6248)
@@ -176,7 +182,7 @@ const ProjectsPage = () => {
                     </MDBCol>
                     <MDBCol lg="7">
 
-                        <h6 className="font-weight-bold mb-3 indigo-text">
+                        <h6 className="font-weight-bold mb-3 teal-text">
                             <MDBIcon icon="images" className="pr-2" />
                             Computer Vision
                         </h6>
@@ -203,7 +209,7 @@ const ProjectsPage = () => {
                             Date: Nov 2018 - Jan 2019
                         </p>
                         <MDBBtn
-                            color="indigo" size="md" className="waves-light button-rounded"
+                            color="primary" size="md" className="waves-light button-rounded"
                             href="https://github.com/zckoh/image-classifier" target="_blank"
                             style={{ "textTransform": "none" }}>
                             GitHub Link (image-classifier)
