@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import { MDBContainer, MDBRow, MDBCol, MDBIcon, MDBBtn, MDBBox } from "mdbreact";
-import HomePageImg from "../../assets/img/background3.png";
+import Emoji from '../../components/Emoji.js';
+import HomePageImg from "../../assets/img/background.png";
 import ProfilePicture from "../../assets/img/profile-photo.jpeg";
 import ArrowDown from "../../assets/img/arrow-down.png";
 import "../../assets/css/homepage.css";
@@ -8,6 +9,8 @@ import "../../assets/css/homepage.css";
 const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
 
 const HomePage = () => {
+    document.title = "zckoh.github.io"
+
     const [offsetY, setOffsetY] = useState(0);
     const handleScroll = () => setOffsetY(window.pageYOffset);
 
@@ -24,7 +27,7 @@ const HomePage = () => {
         <main className="text">
             <section id="top-part">
                 <div className="homepage-hero text-center">
-                    <h2>Hi I'm Zac, welcome to my website!</h2>
+                    <h2>Hi I'm Zac, welcome to my website! <Emoji symbol="👋" /></h2>
                     <h5>Scroll down for more info!</h5>
                     <img onClick={executeScroll} src={ArrowDown} alt="arrow down" className="bounce arrow"></img>
                 </div>

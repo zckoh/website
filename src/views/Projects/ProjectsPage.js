@@ -7,6 +7,8 @@ import EcommerceProjectScreenshot from "../../assets/img/tfnglun-project.jpg";
 import "../../assets/css/projectpage.css";
 
 const ProjectsPage = () => {
+    document.title = "Projects | zckoh.github.io"
+
     return (
         <main className="text padding-top">
             <MDBContainer fluid className="px-5 pb-5 z-depth-0 font-weight-normal">
@@ -29,7 +31,7 @@ const ProjectsPage = () => {
                             Full-stack web development for stationary shop website, with home page, product page,
                             contact page and an admin site for content management.<br />
                             <br />
-                            Website: <a className="amber-text" href="https://tfnglun.com">https://tfnglun.com</a><br />
+                            Website: <a className="amber-text" href="https://tfnglun.com" target="_blank" rel="noopener noreferrer">https://tfnglun.com</a><br />
                             <br />
                             • Deployed full-stack project to Cloud<br />
                             • Integrated Django with AlgoliaSearch<br />
@@ -49,24 +51,26 @@ const ProjectsPage = () => {
                         <MDBBtn
                             color="primary" size="md" className="waves-light button-rounded"
                             href="https://github.com/zckoh/ecommerce-fullstack" target="_blank"
+                            rel="noopener noreferrer"
                             style={{ "textTransform": "none" }}>
                             GitHub Link (zckoh/ecommerce-fullstack)
                         </MDBBtn>
                         <MDBBtn
                             color="dark-green" size="md" className="waves-light button-rounded"
                             href="https://tfnglun.com" target="_blank"
+                            rel="noopener noreferrer"
                             style={{ "textTransform": "none" }}>
                             tfnglun.com
                         </MDBBtn>
                     </MDBCol>
                     <MDBCol lg="5">
-                        <MDBView className="white-background rounded z-depth-2 mb-lg-0 mb-4" hover waves>
-                            <img
-                                className="img-fluid center-photo"
-                                src={EcommerceProjectScreenshot}
-                                alt=""
-                            />
-                            <a href="https://tfnglun.com">
+                        <MDBView className="white-background rounded z-depth-2 mb-lg-0 mb-4" hover>
+                            <a href="https://tfnglun.com" target="_blank" rel="noopener noreferrer">
+                                <img
+                                    className="img-fluid center-photo"
+                                    src={EcommerceProjectScreenshot}
+                                    alt=""
+                                />
                                 <MDBMask overlay="white-slight" />
                             </a>
                         </MDBView>
@@ -76,12 +80,12 @@ const ProjectsPage = () => {
                 <MDBRow>
                     <MDBCol lg="5">
                         <MDBView className="rounded z-depth-2 mb-lg-0 mb-4" hover waves>
-                            <img
-                                className="img-fluid"
-                                src={WebsiteScreenShot}
-                                alt=""
-                            />
-                            <a href="https://github.com/zckoh/website">
+                            <a href="https://github.com/zckoh/website" target="_blank" rel="noopener noreferrer">
+                                <img
+                                    className="img-fluid"
+                                    src={WebsiteScreenShot}
+                                    alt=""
+                                />
                                 <MDBMask overlay="white-slight" />
                             </a>
                         </MDBView>
@@ -104,17 +108,19 @@ const ProjectsPage = () => {
                             Technologies Used: React, Google Maps JavaScript API, Material Design for BootStrap (mdbootstrap)
                         </p>
                         <p>
-                            Date: Nov 2019 - Feb 2020
+                            Date: Nov 2019 - Present
                         </p>
                         <MDBBtn
                             color="primary" size="md" className="waves-light button-rounded"
                             href="https://github.com/zckoh/website" target="_blank"
+                            rel="noopener noreferrer"
                             style={{ "textTransform": "none" }}>
                             GitHub Link (zckoh/website)
                         </MDBBtn>
                         <MDBBtn
                             color="dark-green" size="md" className="waves-light button-rounded"
                             href="what-to-eat" target="_blank"
+                            rel="noopener noreferrer"
                             style={{ "textTransform": "none" }}>
                             What To Eat!
                         </MDBBtn>
@@ -149,18 +155,19 @@ const ProjectsPage = () => {
                         <MDBBtn
                             color="primary" size="md" className="waves-light button-rounded"
                             href="https://github.com/COMP6248-Reproducability-Challenge/music-transformer-comp6248" target="_blank"
+                            rel="noopener noreferrer"
                             style={{ "textTransform": "none" }}>
                             GitHub Link (music-transformer-comp6248)
                         </MDBBtn>
                     </MDBCol>
                     <MDBCol lg="5">
                         <MDBView className="rounded z-depth-2 mb-lg-0 mb-4" hover waves>
-                            <img
-                                className="img-fluid center-photo"
-                                src={AnnotatedTransformer}
-                                alt=""
-                            />
-                            <a href="https://github.com/COMP6248-Reproducability-Challenge/music-transformer-comp6248">
+                            <a href="https://github.com/COMP6248-Reproducability-Challenge/music-transformer-comp6248" target="_blank" rel="noopener noreferrer">
+                                <img
+                                    className="img-fluid center-photo"
+                                    src={AnnotatedTransformer}
+                                    alt=""
+                                />
                                 <MDBMask overlay="white-slight" />
                             </a>
                         </MDBView>
@@ -170,12 +177,12 @@ const ProjectsPage = () => {
                 <MDBRow>
                     <MDBCol lg="5">
                         <MDBView className="rounded z-depth-2 mb-lg-0 mb-4" hover waves>
-                            <img
-                                className="img-fluid"
-                                src={SceneClassifierScreenshot}
-                                alt=""
-                            />
-                            <a href="https://github.com/zckoh/image-classifier">
+                            <a href="https://github.com/zckoh/image-classifier" target="_blank" rel="noopener noreferrer">
+                                <img
+                                    className="img-fluid"
+                                    src={SceneClassifierScreenshot}
+                                    alt=""
+                                />
                                 <MDBMask overlay="white-slight" />
                             </a>
                         </MDBView>
@@ -211,6 +218,7 @@ const ProjectsPage = () => {
                         <MDBBtn
                             color="primary" size="md" className="waves-light button-rounded"
                             href="https://github.com/zckoh/image-classifier" target="_blank"
+                            rel="noopener noreferrer"
                             style={{ "textTransform": "none" }}>
                             GitHub Link (image-classifier)
                         </MDBBtn>

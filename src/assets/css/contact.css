@@ -1,0 +1,9 @@
+.md-form .prefix.active, label {
+    color: white !important;
+}
+
+.md-form input, textarea {
+    border-bottom: 1px solid white !important;
+    box-shadow: none !important;
+}
+

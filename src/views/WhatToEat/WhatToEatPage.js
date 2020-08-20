@@ -8,6 +8,8 @@ import CookTab from './Tabs/CookTab.js';
 
 
 const WhatToEatPage = () => {
+    document.title = "What To Eat! | zckoh.github.io"
+
     const [whichIsOpen, setWhichIsOpen] = useState("");
     const [collapseCloseSpeed, setcollapseCloseSpeed] = useState(0);
 
