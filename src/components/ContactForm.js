@@ -20,9 +20,9 @@ export default class ContactForm extends React.Component {
                 method="POST"
             >
                 <div className="grey-text">
-                    <MDBInput label="Your Name" name="name" icon="user" group type="text" validate className="text" />
-                    <MDBInput label="Your Email" name="email" icon="envelope" group type="email" validate error="wrong" success="right" className="text" />
-                    <MDBInput label="Your Message" name="message" icon="pencil-alt" group type="textarea" validate rows="5" className="text" />
+                    <MDBInput label="Your Name" name="name" icon="user" group type="text" validate className="text" required/>
+                    <MDBInput label="Your Email" name="email" icon="envelope" group type="email" validate error="wrong" success="right" className="text" required/>
+                    <MDBInput label="Your Message" name="message" icon="pencil-alt" group type="textarea" validate rows="5" className="text" required />
                 </div>
                 {status === "SUCCESS" ?
                     <MDBBtn color="success" className="float-right button-rounded">
