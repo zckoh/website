@@ -3,6 +3,8 @@ import { MDBContainer, MDBBtn } from "mdbreact";
 import { NavLink } from 'react-router-dom';
 
 const Error404Page = () => {
+    document.title = "ERROR 404 | zckoh.github.io"
+
     return (
         <main className="text padding-top">
             <MDBContainer fluid className="my-5 pb-5 text-center justify-content-center">

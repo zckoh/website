@@ -9,7 +9,7 @@ import "../../assets/css/homepage.css";
 const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
 
 const HomePage = () => {
-    document.title = "zckoh.github.io"
+    document.title = "Home | zckoh.github.io"
 
     const [offsetY, setOffsetY] = useState(0);
     const handleScroll = () => setOffsetY(window.pageYOffset);
