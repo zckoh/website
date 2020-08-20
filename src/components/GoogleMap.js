@@ -20,7 +20,7 @@ class GoogleMap extends Component {
         allMarkers.push(marker);
 
         window.google.maps.event.addListener(marker, 'click', function () {
-            infowindow.setContent(place.name);
+            infowindow.setContent(`<div class="black-text">${place.name}</div>`);
             infowindow.open(map, this);
         });
     }
@@ -77,57 +77,53 @@ class GoogleMap extends Component {
         }
     }
 
-    displayRestaurants = restaurants => {    
+    displayRestaurants = restaurants => {
         if (!this.loadedInitialSearchResult) {
             return null;
         } else {
-            return restaurants.map( restaurant => (
+            return restaurants.map(restaurant => (
                 <li
                     key={restaurant.id}
                     className="list-group-item d-flex justify-content-between align-items-center"
                 >
-                <span
-                  title={restaurant.name}
-                >
-                  {restaurant.name}
-                </span>
-                <span>
-                  <MDBBtn 
-                    color="info" 
-                    // onClick={ () => {viewItem(dish);} }
-                >View</MDBBtn>
-                </span>
-              </li>
-            ));    
+                    <span title={restaurant.name}>
+                        {restaurant.name}
+                    </span>
+                    <span>
+                        <MDBBtn color="info">View</MDBBtn>
+                    </span>
+                </li>
+            ));
         }
     };
 
     handleRandomClick = () => {
-        let randomIndex = Math.floor(Math.random() * this.places.length);        
+        let randomIndex = Math.floor(Math.random() * this.places.length);
         let randomItem = this.places[randomIndex];
 
         infowindow.close();
-        infowindow.setContent(randomItem.name);
-        infowindow.open(map,allMarkers[randomIndex]);
+        infowindow.setContent(`<div class="black-text">${randomItem.name}</div>`);
+        infowindow.open(map, allMarkers[randomIndex]);
     }
 
     render() {
         return (
             <MDBContainer>
-                <div className="map-box" id={this.props.id} />
-                <MDBBtn
-                    color="info"
-                    onClick={() => { if (this.getNextPage) this.getNextPage(); }}
-                >
-                    Search More
+                <div className="map-box d-flex justify-content-center" id={this.props.id} />
+                <div className="pt-4">
+                    <MDBBtn
+                        color="info"
+                        onClick={() => { if (this.getNextPage) this.getNextPage(); }}
+                    >
+                        Search More
                 </MDBBtn>
-                <MDBBtn
-                    color="primary"
-                    onClick={() => { this.handleRandomClick() }}
-                >
-                    Randomly Choose 1
+                    <MDBBtn
+                        color="primary"
+                        onClick={() => { this.handleRandomClick() }}
+                    >
+                        Choose Random
                 </MDBBtn>
-                {/* {this.displayRestaurants(this.places)} */}
+                </div>
             </MDBContainer>
         );
     }

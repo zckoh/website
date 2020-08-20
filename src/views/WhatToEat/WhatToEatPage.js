@@ -33,25 +33,24 @@ const WhatToEatPage = () => {
         if (id.trim() === whichIsOpen.trim()) {
             setcollapseCloseSpeed(1500);
         } else {
-            setcollapseCloseSpeed(0);
+            setcollapseCloseSpeed(1);
         }
     }
 
     return (
-        <main className="text padding-top">
+        <main className="text padding-top font-weight-normal">
         <MDBContainer fluid className="my-5 pb-5 text-center justify-content-center content">
-            <h1 className="pb-3">What To Eat!</h1>
+            <h1 className="pb-3 font-weight-bold">What To Eat!</h1>
             <MDBContainer fluid>
                 <MDBBtn
-                    color="dark"
+                    color="primary"
                     onClick={() => { openCookingCollapse(); setCloseCollapseSpeed("Cooking");}}
                     style={{ marginBottom: "1rem", "textTransform": "none" }}
                 >
                     Cook? (Save <Emoji symbol="💲💲" />)
                 </MDBBtn>
                 <MDBBtn
-                    size="large"
-                    color="blue"
+                    color="unique"
                     onClick={() => { openEatOutCollapse(); setCloseCollapseSpeed("Eat Out");}}
                     style={{ marginBottom: "1rem", "textTransform": "none" }}
                 >

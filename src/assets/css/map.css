@@ -1,13 +1,15 @@
-.map-wrapper {
-    height: 80vh;
+@media (max-width: 500px) { 
+    .map-box {
+        height: 60vh !important;
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+    }
 }
 
 .map-box {
-    height: 80vh !important;
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
+    height: 60vh !important;
+}
+
+.infowindow-background {
+    background-color: #8a6c6a;
 }

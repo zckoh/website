@@ -14,8 +14,9 @@ const RandomDishModal = (props) => {
                 { props.activeItem.name }
             </MDBModalHeader>
             <MDBModalBody>
-            <form className='mx-3 grey-text'>
+            <form className='mx-3 text'>
                 <MDBInput
+                    className="text"
                     disabled
                     label='Dish Name'
                     name="name"
@@ -26,6 +27,7 @@ const RandomDishModal = (props) => {
                     validate
                 />
                 <MDBInput
+                    className="text"
                     disabled
                     type='textarea'
                     name="additional_details"
@@ -37,7 +39,7 @@ const RandomDishModal = (props) => {
             </form>
             </MDBModalBody>
             <MDBModalFooter>
-            <MDBBtn color='secondary' onClick={props.toggle}>
+            <MDBBtn color='default' onClick={props.toggle}>
                 Close
             </MDBBtn>
             <MDBBtn color='green' onClick={props.onRandomClick}>
