@@ -2,6 +2,25 @@
     margin: 5% 0;
 }
 
+.homepage-background {
+    position: relative;
+    justify-content: center;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.homepage-hero {
+    position: absolute;
+    z-index: 1;
+    top: calc(50% - 2rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
 .arrow {
     height: 20px;
     text-align: center;

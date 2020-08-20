@@ -1,16 +1,16 @@
 import React, { useState, useRef, useEffect } from 'react';
 import {
-    MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler,
-    MDBCollapse, MDBNavItem, MDBNavLink,
-    MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem
+    MDBNavbar, MDBNavbarBrand, MDBNavbarNav, 
+    MDBNavbarToggler, MDBCollapse, MDBNavItem 
 } from 'mdbreact';
+
+import { NavLink }  from 'react-router-dom';
 import Logo from '../assets/img/logo.png';
 import '../assets/css/navbar.css';
 
 const MyNavbar = () => {
     const [collapsed, setCollapsed] = useState(false);
     const toggleCollapse = () => { setCollapsed(!collapsed); }
-
     const node = useRef();
 
     const handleClickOutside = e => {
@@ -35,44 +35,36 @@ const MyNavbar = () => {
     }, [collapsed]);
 
     return (
-        <div ref={node} >
-            <MDBNavbar color="stylish-color-dark" fixed="top" dark expand="md" scrolling>
-                <MDBNavbarBrand href="home">
+        <div ref={node}>
+            <MDBNavbar dark expand="md" >
+                <MDBNavbarBrand>
+                    <NavLink to='/'>
                     <img src={Logo} style={{
                         height: '1.5rem',
                         width: '1.5rem',
-                        "marginBottom": '0.5rem',
-                        "marginRight": '0.5rem',
-                    }} alt="fireSpot" />
-                    <strong className="white-text">zckoh.github.io</strong>
+                        marginBottom: '0.5rem',
+                        marginRight: '0.5rem',
+                    }} alt="Logo" />
+                    <strong className="text">zckoh.github.io</strong>
+                    </NavLink>
                 </MDBNavbarBrand>
                 <MDBNavbarToggler onClick={() => { toggleCollapse() }} />
-                <MDBCollapse id="navbarCollapse" isOpen={collapsed} navbar>
-                    <MDBNavbarNav left>
-                        <MDBNavItem>
-                            <MDBNavLink to={"home"}>
-                                <div onClick={() => { setCollapsed(false) }}>
-                                    <strong>Home</strong>
-                                </div>
-                            </MDBNavLink>
+                <MDBCollapse isOpen={collapsed} navbar>
+                    <MDBNavbarNav right>
+                        <MDBNavItem className="text-center">
+                            <NavLink to={"home"} onClick={() => { setCollapsed(false) }} className="text">
+                                <strong>Home</strong>
+                            </NavLink>
                         </MDBNavItem>
-                        <MDBNavItem>
-                            <MDBNavLink to={"projects"}>
-                                <div onClick={() => { setCollapsed(false) }}>
+                        <MDBNavItem className="text-center">
+                            <NavLink to={"projects"} onClick={() => { setCollapsed(false) }} className="text">
                                     <strong>Projects</strong>
-                                </div>
-                            </MDBNavLink>
+                            </NavLink>
                         </MDBNavItem>
-                        <MDBNavItem>
-                            <MDBDropdown className="mydropdown">
-                                <MDBDropdownToggle nav caret>
-                                    <span className="mr-2"><strong>Apps</strong></span>
-                                </MDBDropdownToggle>
-                                <MDBDropdownMenu className="mydropdown">
-                                    <MDBDropdownItem className="mydropdownitems" href="what-to-eat"><strong>What To Eat!</strong></MDBDropdownItem>
-                                    <MDBDropdownItem disabled className="mydropdownitems" href="#">More coming soon!</MDBDropdownItem>
-                                </MDBDropdownMenu>
-                            </MDBDropdown>
+                        <MDBNavItem className="text-center">
+                            <NavLink to={"contact"} onClick={() => { setCollapsed(false) }} className="text">
+                                    <strong>Contact</strong>
+                            </NavLink>
                         </MDBNavItem>
                     </MDBNavbarNav>
                 </MDBCollapse>

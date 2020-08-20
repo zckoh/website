@@ -1,5 +1,10 @@
+.footer {
+    flex-shrink: 0;
+    background-color: #050e27;
+}  
+
 #contacts-container {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 #linkedin-button {
@@ -8,4 +13,8 @@
 
 #github-button {
     background: #333 !important;
+}
+
+#email-button {
+    background: #D44638 !important;
 }

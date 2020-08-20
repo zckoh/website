@@ -1,10 +1,11 @@
-.mydropdown {
-    background-color: #3E4551;
+.navbar {
+    box-shadow: none;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    position: absolute;
 }
 
-.mydropdownitems {
-    color: white !important;
-}
-.mydropdownitems:hover {
-    background-color: rgb(82, 88, 99);
+.nav-item {
+    margin: 5px;
 }

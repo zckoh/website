@@ -5,10 +5,14 @@ html, body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(228, 228, 228);
   height: 100%;
   scroll-behavior: smooth;
   --scroll-behavior: smooth;
+  background-color: #151A31;
+}
+
+.text {
+  color: rgba(255,255,255,0.85) !important;
 }
 
 body { 
@@ -16,15 +20,8 @@ body {
   flex-direction: column; 
 }
  
-.content { 
-  flex: 1 0 auto; 
-} 
-.footer {
-  flex-shrink: 0; 
-}
-
-.light-grey-background {
-  background-color: rgb(228, 228, 228);
+.content {
+  flex: 1 0 auto;
 }
 
 #root {
@@ -33,9 +30,14 @@ body {
   height: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.button-rounded {
+  border-radius: 6px;
 }
 
-.button-rounded {border-radius: 6px;}
+hr {
+  border-top: 1px solid rgba(255,255,255,.3);
+}
+
+.padding-top {
+  padding-top: 150px;
+}
