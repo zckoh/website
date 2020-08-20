@@ -41,7 +41,7 @@ const HomePage = () => {
             <section id="bottom-part" className="padding-top pb-4">
                 <MDBContainer>
                     <h2 className="h1-responsive font-weight-bold text-center my-5" ref={bottomOfHeader}>
-                        About Me
+                        About Me <Emoji symbol="🧑" />
                         </h2>
                     <p className="w-responsive text-center mx-auto mb-4">
                         My name is Zac Koh, I'm from Penang, Malaysia, currently based in Cambridge, UK.

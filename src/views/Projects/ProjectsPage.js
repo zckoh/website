@@ -1,5 +1,6 @@
 import React from "react";
 import { MDBRow, MDBCol, MDBMask, MDBIcon, MDBView, MDBBtn, MDBContainer } from "mdbreact";
+import Emoji from '../../components/Emoji.js';
 import WebsiteScreenShot from "../../assets/img/website-screenshot.jpg";
 import SceneClassifierScreenshot from "../../assets/img/scene-classifier-screenshot.jpg";
 import AnnotatedTransformer from "../../assets/img/the-annotated-transformer_14_0.png";
@@ -13,7 +14,7 @@ const ProjectsPage = () => {
         <main className="text padding-top">
             <MDBContainer fluid className="px-5 pb-5 z-depth-0 font-weight-normal">
                 <h2 className="h1-responsive font-weight-bold text-center my-5">
-                    My Recent Projects
+                    My Recent Projects <Emoji symbol="📚" />
                 </h2>
                 <p className="text-center w-responsive mx-auto mb-5">
                     Below are a list of my recent projects that I've been working on. Please check them out!
