@@ -7,3 +7,6 @@
     box-shadow: none !important;
 }
 
+.btn.disabled, .btn:disabled {
+    opacity: 1;
+}
