@@ -26,7 +26,7 @@ const ContactPage = () => {
                             <a href="https://github.com/zckoh" target="_blank" rel="noopener noreferrer" className="text pr-3" style={{ fontSize: `30px` }}>
                                 <MDBIcon fab icon="github" />
                             </a>
-                            <a href="https://github.com/zckoh" target="_blank" rel="noopener noreferrer" className="text pr-3" style={{ fontSize: `30px` }}>
+                            <a href="http://www.linkedin.com/in/zackoh" target="_blank" rel="noopener noreferrer" className="text pr-3" style={{ fontSize: `30px` }}>
                                 <MDBIcon fab icon="linkedin" />
                             </a>
                             <a href="https://www.kaggle.com/zckoh20" target="_blank" rel="noopener noreferrer" className="text" style={{ fontSize: `30px` }}>
