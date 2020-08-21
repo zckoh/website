@@ -13,10 +13,10 @@ const Footer = () => {
                 <MDBBtn size="lg" href="mailto:zckoh96@gmail.com" id="email-button" color="grey" className="button-rounded">
                     <MDBIcon icon="envelope" className="pr-1" /> Email
                 </MDBBtn>
-                <MDBBtn size="lg" href="https://github.com/zckoh" target="_blank" id="github-button" className="button-rounded">
+                <MDBBtn size="lg" href="https://github.com/zckoh" target="_blank" rel="noopener noreferrer" id="github-button" className="button-rounded">
                     <MDBIcon fab icon="github" className="pr-1" /> Github
                 </MDBBtn>
-                <MDBBtn size="lg" href="http://www.linkedin.com/in/zackoh" target="_blank" id="linkedin-button" className="button-rounded">
+                <MDBBtn size="lg" href="http://www.linkedin.com/in/zackoh" target="_blank" rel="noopener noreferrer" id="linkedin-button" className="button-rounded">
                     <MDBIcon fab icon="linkedin-in" className="pr-1" /> Linkedin
                 </MDBBtn>
             </MDBContainer>
