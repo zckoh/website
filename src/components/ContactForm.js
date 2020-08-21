@@ -25,7 +25,7 @@ export default class ContactForm extends React.Component {
                     <MDBInput label="Your Message" name="message" icon="pencil-alt" group type="textarea" validate rows="5" className="text" required />
                 </div>
                 {status === "SUCCESS" ?
-                    <MDBBtn color="success" className="float-right button-rounded">
+                    <MDBBtn color="success" disabled className="float-right button-rounded">
                         Sent
                         <MDBIcon icon="check" className="ml-2" />
                     </MDBBtn>
