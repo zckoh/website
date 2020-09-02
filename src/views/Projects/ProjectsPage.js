@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { MDBRow, MDBCol, MDBMask, MDBIcon, MDBView, MDBBtn, MDBContainer } from "mdbreact";
 import Emoji from '../../components/Emoji.js';
 import WebsiteScreenShot from "../../assets/img/website-screenshot.jpg";
@@ -118,13 +119,14 @@ const ProjectsPage = () => {
                             style={{ "textTransform": "none" }}>
                             GitHub Link (zckoh/website)
                         </MDBBtn>
-                        <MDBBtn
-                            color="dark-green" size="md" className="waves-light button-rounded"
-                            href="what-to-eat" target="_blank"
-                            rel="noopener noreferrer"
-                            style={{ "textTransform": "none" }}>
-                            What To Eat!
-                        </MDBBtn>
+                        <Link to="what-to-eat">                            
+                            <MDBBtn
+                                color="dark-green" size="md" className="waves-light button-rounded"
+                                rel="noopener noreferrer"
+                                style={{ "textTransform": "none" }}>
+                                What To Eat!
+                            </MDBBtn>
+                        </Link>
                     </MDBCol>
                 </MDBRow>
                 <hr className="my-5" />

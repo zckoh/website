@@ -52,17 +52,17 @@ const MyNavbar = () => {
                 <MDBCollapse isOpen={collapsed} navbar>
                     <MDBNavbarNav right>
                         <MDBNavItem className="text-center">
-                            <NavLink to={"home"} onClick={() => { setCollapsed(false) }} className="text">
+                            <NavLink to="home" onClick={() => { setCollapsed(false) }} className="text">
                                 <strong>Home</strong>
                             </NavLink>
                         </MDBNavItem>
                         <MDBNavItem className="text-center">
-                            <NavLink to={"projects"} onClick={() => { setCollapsed(false) }} className="text">
+                            <NavLink to="projects" onClick={() => { setCollapsed(false) }} className="text">
                                     <strong>Projects</strong>
                             </NavLink>
                         </MDBNavItem>
                         <MDBNavItem className="text-center">
-                            <NavLink to={"contact"} onClick={() => { setCollapsed(false) }} className="text">
+                            <NavLink to="contact" onClick={() => { setCollapsed(false) }} className="text">
                                     <strong>Contact</strong>
                             </NavLink>
                         </MDBNavItem>
