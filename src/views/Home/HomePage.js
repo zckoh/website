@@ -69,14 +69,14 @@ const HomePage = () => {
                         currently on a graduate developer role with Barclays.
                     </p>
                     <h4 className="h5-responsive font-weight-bold text-center my-2">
-                        My Goals for 2020:
+                        My Goals for {new Date().getFullYear()}:
                     </h4>
                     <ol className="w-responsive text-center mx-auto mb-5">
                         <li className="w-responsive text-center mx-auto">
-                            Learn web development (front-end + back-end)
+                            Learn TypeScript
                         </li>
                         <li className="w-responsive text-center mx-auto">
-                            Learn more about Big Data technologies
+                            Learn more about latest web trends (Serverless, Headless CMS, JAMStack etc...)
                         </li>
                     </ol>
                     <MDBRow>
@@ -105,27 +105,27 @@ const HomePage = () => {
                                             Programming Languages
                                         </li>
                                         <p className="mb-1">
-                                            Python, JavaScript, Java, C, C++,
+                                            JavaScript, Python, Java, C, C++,
                                             Groovy
                                         </p>
                                         <li className="font-weight-bold">
                                             Web Development
                                         </li>
                                         <p className="mb-1">
-                                            Django, React, Node.js, MongoDB
+                                            React, GraphQL, Node.js, MongoDB, Django 
+                                        </p>
+                                        <li className="font-weight-bold">
+                                            DevOps
+                                        </li>
+                                        <p className="mb-1">
+                                            Nexus, Maven, TeamCity, Jenkins, Chef,
+                                            Git, Bash
                                         </p>
                                         <li className="font-weight-bold">
                                             Data Science/ML
                                         </li>
                                         <p className="mb-1">
                                             PyTorch, Pandas, sklearn, numpy
-                                        </p>
-                                        <li className="font-weight-bold">
-                                            DevOps
-                                        </li>
-                                        <p className="mb-1">
-                                            Nexus, Maven, TeamCity, Jenkins,
-                                            Git, Bash
                                         </p>
                                     </ul>
                                 </MDBCol>
